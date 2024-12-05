@@ -53,7 +53,8 @@ class root_window:
                         ('Delete', '#57a1f8', self.delete_record),
                         ('Copy Password', '#57a1f8', self.copy_password),
                         ('Show All Records', '#57a1f8', self.show_records),
-                        ('Update', '#57a1f8', self.update_record))  
+                        ('Update', '#57a1f8', self.update_record) ,
+                        ('Clear All', '#57a1f8', self.clear))
         for btn_info in buttons_info:
             if btn_info[0] == 'Show All Records':
                 self.row_no += 1
@@ -151,6 +152,12 @@ class root_window:
             self.records_tree.delete(item)
         for record in records:
             self.records_tree.insert('', 'end', values=record)
+    def clear(self):
+    # Clear all the entry boxes
+       for entry in self.entry_boxes:
+        entry.delete(0, 'end')
+
+      
 
     def on_record_select(self, event):
         selected_item = self.records_tree.selection()  # Get selected item

@@ -148,7 +148,7 @@ def signup_command():
 
     Button(frame, width=39, pady=7, text='Sign Up', bg='#57a1f8', fg='white', border=0, command=signup).place(x=35, y=280)
     label=Label(frame, text="Already have an account?", fg='black', bg='white', font=("Calibri(Body)", 9))
-    label.place(x=75, y=340)
+    label.place(x=50, y=340)
 
     signin=Button(frame, width=6, text='Sign in', border=0, bg='white', cursor='hand2', fg='#57a1f8', command=sign)
     signin.place(x=200, y=340)
